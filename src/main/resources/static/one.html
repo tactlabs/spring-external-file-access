@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+  Content comes here
+  
+  <div id="test">
+  </div>
+  
+  <img src="/resources/three.png"/>
+  
+</div>
+
+<script src="http://control-dev.z8games.com/packages/orchestra/foundation/components/jquery/jquery.min.js"></script>
+
+
+<script>
+	$.ajax({
+		url: "http://localhost:2020/na/tna/test",
+		cache: false,
+		success: function(result){
+			//$("#results").append(result);
+			console.log(result);
+			
+			var content = '<img src="" />'
+			
+			$("#test").html(result.total);
+		}
+	});
+</script>
+
+</body>
+</html>
